@@ -42,7 +42,7 @@ class WeatherDisplay extends Component {
        const weatherData = this.state.weatherData;
       
           
-     //   console.log(obj);
+    
         for (var key in weatherData) {
             console.log(key, ': ', weatherData[key]);
             for (var i in weatherData[key]){
@@ -50,11 +50,7 @@ class WeatherDisplay extends Component {
             }
         };
 
-        
-      /*  for (var key in weatherData['weather']){
-            console.log(key);
-        };*/
-      
+     
     if (!weatherData) return <div>Loading</div>;
     return <div>
             <h4> {weatherData['weather'][0]['main']} in {this.props.name} <img src={'http://openweathermap.org/img/w/'+weatherData['weather'][0]['icon']+'.png' } /></h4>
